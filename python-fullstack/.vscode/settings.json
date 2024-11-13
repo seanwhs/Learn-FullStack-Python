@@ -1,0 +1,29 @@
+{
+    "cSpell.words": [
+        "appcontext",
+        "classmethods",
+        "dataclasses",
+        "dbname",
+        "INET",
+        "jsonify",
+        "lastrowid",
+        "psycopg",
+        "pytest",
+        "rgba",
+        "sendall",
+        "staticmethods"
+    ],
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "localtest",
+            "group": "local",
+            "database": "postgres",
+            "username": "postgres",
+            "password": "postgres",
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <title>MySales - Products List</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Image</th>
+        <th>Add to cart</th>
+        <th>Delete</th>
+      </tr>
+      {% for product in products %}
+      <tr>
+        <td><a href="/products/{{ product.id }}"> {{ product.title }}</a></td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.price }}</td>
+        <td>
+          <img src="{{ product.image }}" width="128" height="128" />
+        </td>
+        <td>
+          <button id="{{ product.id }}" onclick="addToCart(event)">Add to cart</button>
+        </td>
+        <td>
+          <button id="{{ product.id }}" onclick="deleteProduct(event)">Delete product</button>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+    <script src="/static/js/cart_add.js"></script>
+    <script src="/static/js/product_delete.js"></script>
+  </body>
+</html>
